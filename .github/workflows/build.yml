@@ -37,11 +37,11 @@ jobs:
 
 
     - name: Decode Keystore
-      uses: timheuer/base64-to-file@v1
+      uses: timheuer/base64-to-file@v1.2.4
       id: android_keystore
       with:
         fileName: "android_keystore.jks"
-        encodedString: ${{ secrets.KEYSTORE }}
+        encodedString: ${{ secrets.APP_KEYSTORE_BASE64 }}
 
 
     - name: Build Signed APK
